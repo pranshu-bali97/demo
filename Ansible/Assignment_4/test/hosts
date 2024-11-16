@@ -1,0 +1,4 @@
+# hosts
+[servers]
+54.91.217.131 ansible_user=ubuntu
+

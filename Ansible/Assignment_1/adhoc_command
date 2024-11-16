@@ -1,0 +1,37 @@
+##first check the connection
+ansible ubuntu -m ping
+
+##performed below tasks
+ansible ubuntu -m group -a "name=NinjaTeam state=present" --become
+
+ansible ubuntu -m user -a "name=Nitish group=NinjaTeam shell=/bin/bash create_home=yes" --become
+ansible ubuntu -m user -a "name=Rahul group=NinjaTeam shell=/bin/bash create_home=yes" --become
+
+
+##first check the permission if reqiured then performed this steps. 
+ansible ubuntu -m file -a "path=/home/Nitish/team state=directory owner=Nitish group=NinjaTeam mode=770" --become
+ansible ubuntu -m file -a "path=/home/Nitesh/ninja state=directory owner=Nitish group=NinjaTeam mode=770" --become
+ansible ubuntu -m file -a "path=/home/Rahul/team state=directory owner=Rahul group=NinjaTeam mode=770" --become
+ansible ubuntu -m file -a "path=/home/Rahul/ninja state=directory owner=Rahul group=NinjaTeam mode=770" --become
+
+
+##List of user
+ansible ubuntu -m command -a "getent passwd" --become
+
+##list of teams
+ansible ubuntu -m command -a "getent group" --become
+
+##change user shell
+ansible ubuntu -m user -a "name=Nitish shell=/bin/zsh" --become
+ansible ubuntu -m user -a "name=Rahul shell=/bin/zsh" --become
+
+##change user password
+ansible ubuntu -m user -a "name=Nitish password={{ '123' | password_hash('sha512') }}" --become
+ansible ubuntu -m user -a "name=Rahul password={{ '123' | password_hash('sha512') }}" --become
+
+##Delete the user
+ansible ubuntu -m user -a "name=Nitish state=absent remove=yes" --become
+ansible ubuntu -m user -a "name=Rahul state=absent remove=yes" --become
+
+##Delete the group
+ansible ubuntu -m group -a "name=NinjaTeam state=absent" --become

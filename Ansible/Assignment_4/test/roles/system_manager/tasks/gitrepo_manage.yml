@@ -1,0 +1,9 @@
+---
+- name: Clone or update Git repositories
+  ansible.builtin.git:
+    repo: "{{ item.repo_url }}"
+    dest: "{{ item.dest }}"
+    version: "{{ item.version }}"
+  loop: "{{ git_repositories }}"
+  loop_control:
+    label: "{{ item.dest }}"

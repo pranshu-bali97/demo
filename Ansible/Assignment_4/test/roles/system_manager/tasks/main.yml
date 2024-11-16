@@ -1,0 +1,16 @@
+---
+- name: Ensure required packages are installed
+  ansible.builtin.package:
+    name: "{{ packages_to_install }}"
+    state: present
+
+- name: Ensure required directories exist
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+  loop: "{{ required_directories }}"
+
+- include_tasks: group.yml  # Ensure groups are created first
+- include_tasks: user_manager.yml   # Then manage users
+- include_tasks: gitrepo_manage.yml     # Then manage Git repositories
+

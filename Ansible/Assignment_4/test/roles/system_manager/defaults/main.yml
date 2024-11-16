@@ -1,0 +1,32 @@
+
+---
+# List of packages to install
+packages_to_install:
+  - git
+  - nginx
+
+# List of groups to create
+groups_to_create:
+  - developers
+  - Operations
+
+# List of users to manage
+users:
+  - name: "john"
+    password: "{{ 'john' | password_hash('sha512') }}"
+    groups: ["developers"]
+    shell: "/bin/bash"
+  - name: "Rahul"
+    password: "{{ 'Rahul' | password_hash('sha512') }}"
+    groups: ["Operations"]
+    shell: "/bin/zsh"
+
+git_repositories:
+  - repo_url: "https://github.com/pranshu-bali97/Gurukulam.git"
+    dest: "/home/ubuntu204/Gurukulam"
+    version: "main"
+
+required_directories:
+  - "/opt/myapp"
+  - "/etc/myapp/config"
+  - "/var/log/myapp"
