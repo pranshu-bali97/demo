@@ -1,4 +1,4 @@
-Create a Declarative CI  pipeline for java based project that contains various stages like
+Create a Declarative CI  pipeline for java based project that contains various stages like with url:https://github.com/builderHub/CICD-01.git
 Code checkout
 Run the below stages in parallel
 Code stability.
