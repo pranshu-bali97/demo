@@ -1,0 +1,70 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Setup System Dependencies') {
+            steps {
+                echo 'Installing GnuPG and Curl...'
+                sh '''
+                    sudo apt-get update
+                    sudo apt-get install -y gnupg curl
+                '''
+            }
+        }
+
+        stage('Add MongoDB GPG Key') {
+            steps {
+                echo 'Adding MongoDB GPG Key...'
+                sh '''
+                    curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+                        gpg --batch --yes --dearmor | \
+                        sudo tee /usr/share/keyrings/mongodb-server-7.0.gpg > /dev/null
+                '''
+            }
+        }
+
+        stage('Add MongoDB Repository') {
+            steps {
+                echo 'Adding MongoDB Repository...'
+                sh '''
+                    echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/7.0 multiverse" | \
+                        sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+                '''
+            }
+        }
+
+        stage('Install MongoDB') {
+            steps {
+                echo 'Installing MongoDB 7.0.14...'
+                sh '''
+                    sudo apt-get update
+                    sudo apt-get install -y mongodb-org=7.0.14 \
+                                             mongodb-org-database=7.0.14 \
+                                             mongodb-org-server=7.0.14 \
+                                             mongodb-mongosh \
+                                             mongodb-org-mongos=7.0.14 \
+                                             mongodb-org-tools=7.0.14
+                '''
+            }
+        }
+
+        stage('Start and Enable MongoDB') {
+            steps {
+                echo 'Starting and enabling MongoDB service...'
+                sh '''
+                    sudo systemctl start mongod
+                    sudo systemctl enable mongod
+                '''
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'MongoDB installation and setup completed successfully!'
+        }
+        failure {
+            echo 'MongoDB installation failed. Please check the logs.'
+        }
+    }
+}
