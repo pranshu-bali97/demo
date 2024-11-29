@@ -1,0 +1,11 @@
+---
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-east-1
+keyed_groups:
+  - key: tags.dyno
+filters:
+  instance-state-name: running  # Only include running instances
+#hostnames:
+ # - public_ip  # Ensure you use public_ip instead of public-ip-address
+remote_user: ubuntu
