@@ -1,0 +1,43 @@
+@Library('jenkins-shared-library') _
+pipeline {
+    agent any
+    environment {
+        ANSIBLE_SSH_ARGS = '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+    }
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/pranshu-bali97/6.git'
+            }
+        }
+        stage('Initial Approval') {
+            steps {
+                input message: 'Do you want to proceed with the build?', ok: 'Yes', parameters: []
+                // The pipeline will pause here, awaiting user approval to proceed.
+            }
+        }
+        stage('Playbook Execution') {
+            steps {
+                script {
+                    // Calls the MongoDB pipeline function from the shared library
+                    ansible()
+                }
+            }
+        }
+    }
+    post {
+        success {
+            script {
+                notification('SUCCESS', 'pre-prod')
+            }
+        }
+        failure {
+            script {
+                notification('FAILURE', 'pre-prod')
+            }
+        }
+        always {
+            echo 'Pipeline completed.'
+        }
+    }
+}
