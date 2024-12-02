@@ -1,0 +1,24 @@
+######1##########
+Create a freestyle job1 which prints Hello <your name>.your name must be user input.
+Make sure that only 5builds are available in job history at a time.No build history should be available after 1 day
+Ensure that job can be run only once every 10 mins
+
+#######2###########
+create a freestyle job2 and clone below repo in it:
+https://opstree.slack.com/archives/C07P7GB14RW/p1731148221948849
+
+create a private repo in github.create another freestyle job Job3 and clone previously created repo in it.
+
+#####3#########
+create a freestyle job job4 which is invoked manually and asks for the file name.Then job should show the number of words in that file.
+Make sure Job1 created before is at 1pm daily
+Make sure Job3 created before will monitor the repo if code has been commited in the last 5mins
+Make sure Job2 is run every 5min.Create another freestyle job Job5.It will list all items cloned in Job2 every time.
+
+
+#########4##########3
+create a freestyle job Job6 which will print its build number and job name
+send a notification on E-mails/slack
+Delete workspaces for job6 once the build is completed.
+
+########5##########`
