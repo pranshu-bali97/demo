@@ -1,0 +1,55 @@
+###########1##################
+Create a Jenkins Job that will monitor a repository if a code has been committed in last 5 minutes
+Ensure that we maintain only last 10 executions
+By default this job should count number of words in the README.md file
+If a person manually invokes the Job it should ask for a file name and for the file name being asked job should show the number of words in that file
+Send a notification on EMail/Slack
+
+#############2#############
+In this lab we will explore how we can update Jenkins settings to better utilize Jenkins:
+Your Jenkins setup should have your team name at top "Team XXXXXXXXX".
+It should be capable to execute 5 tasks at a time
+You should be able to access Jenkins via a domain name i.e ".salesforce.com:8080"
+Put a restriction in your Jenkins setup that a project can only be created with a convention that a team name should be prefixed (.)
+Enable Maven support in your Jenkins setup.
+
+#######3############
+create a folder day1 and move all our into this folder.
+create a maven type job to compile project repo where the branches must be fetched dynamically
+intall build monitor plugin to view the status of various jobs in one single places
+install monitoring plugin to visualize the health of jenkins
+updates job to be invoked via rest api
+
+
+###############4######################
+Lab 2.2 | Authentication and Authorization
+Create a jenkins user batch27.
+It should be able to execute, view, configure all jobs of Day1 [use regex for matching patterns]
+
+Task 2.2 | Minimalist CI
+JOB1
+Create a job that will monitor https://github.com/builderHub/CICD-01 if there is a code commit and in that case will get executed
+JOB2 
+On successful completion of the previous job, this job should run the tests :mvn checkstyle, mvn test
+If possible display the test results.
+JOB3
+On successful completion of the previous job, this job should build the code
+If possible should show the artifact generated.
+
+##############5###############
+Task 2.3 | Improving CI 
+
+Create one job to achieve the following:
+
+1.) Monitor repository https://github.com/builderHub/CICD-01, if any code commit is there, it must be triggered.
+2.) Scan for code analysis: execute mvn checkstyle
+3.) Run unit tests: execute mvn test
+4.) Invoke Dependency check (explore OWASP plugin from jenkins)
+5.) build artifact
+6.) archive the artifact
+7.) publish dependency check report
+8.) Publish jacoco coveage report
+9.) Record static analysis report
+10.) Send email notification
+
+
