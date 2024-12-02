@@ -1,0 +1,15 @@
+-- Task-1: 
+- Create two or more servers with NGINX installed on each,each serving different contents.  
+- Set up a load balancer to distribute traffic across the NGINX servers.  
+- Configure DNS to point to the load balancer, allowing access to the servers via a web browser using the DNS name.
+
+Task-2
+-- Create an infrastructure with the following resources or use existing resources:  
+- VPC  
+- 2 public subnets  
+- 2 private subnets  
+- 1 instance on one of the private subnets  
+- create internet facing application load balancer  
+- create Autoscaling group and attach your above load balancer  
+- attach CPU intensive dynamic tracking policy to your asg.  
+Note:- Both server should have Different content.
