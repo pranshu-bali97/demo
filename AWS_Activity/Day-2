@@ -1,0 +1,29 @@
+-- TASK 1:  
+Create an IAM group named Developers. 
+Create two IAM users, dev-user1 and dev-user2 and enable MFA. 
+Attach the AmazonEC2ReadOnlyAccess policy to the Developers group. 
+Attach the BillingReadOnlyAccess policy to the Developers group. 
+Add dev-user1 and dev-user2 to the Developers group. 
+Confirm that dev-user1 and dev-user2 can only view EC2 instances and access the Billing dashboard but cannot make any changes.
+
+TASK -1 
+Create a S3 bucket and host a static website of Nginx through S3 feature after that integrate cloudFront service with your S3 bucket to overcome the latency and then access your static website through cloudFront url. Now change the content and hit again remember cache will not be taken at that time 
+Things you will learn: 
+S3 
+S3 policy 
+Object policy 
+cloudFront 
+Nginx 
+invalidation option
+
+
+TASK-2 
+Create a Instance inside VPC network if already exist if not then make whole infrastructure with the help of aws-cli tool 
+Perform operations below through aws-cli: 
+Start instance 
+Stop instance 
+Restart instance 
+Terminate instance 
+Attach IAM role to that instance 
+Make ALB internet facing 
+Good to do, If above implemented then implement this by aws-cli with single click, first do manually on console.
