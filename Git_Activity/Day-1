@@ -1,0 +1,53 @@
+Create account on github
+
+Create one repository on github
+
+Clone this repository to your local machine
+
+Add file in repo
+
+Commit this to your remote repository
+
+
+
+
+#####For deploy app#############
+git clone https://github.com/opstree/spring3hibernate.git
+sudo apt update
+sudo apt install openjdk-11-jdk
+sudo apt install maven
+mvn dependency:resolve
+mvn compile
+mvn test
+mvn package
+mvn install
+sudo apt install tomcat9 tomcat9-admin
+Add the below 2 lines(block of code) in /var/lib/tomcat9/conf/tomcat-users.xml
+
+block of code->
+
+<role rolename="manager-gui" />
+<user username="admin" password="admin" roles="manager-gui" />
+
+restart the service using -> sudo systemctl restart tomcat9
+
+Goto-> localhost:8080
+
+manager webapps
+enter admin,admin(id,password)
+upload war file
+
+
+########topics#########
+git config 
+.git 
+PMD
+Cobertura
+JaCoCo 
+Surefire
+Maven lifecycle
+git cherry-pick 
+git stash
+
+
+
