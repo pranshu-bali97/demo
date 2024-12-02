@@ -1,0 +1,11 @@
+#######1###############
+install nginx using handler.
+Create two file using handlers.
+
+#######2##########
+1 create 5 user without using variable file.
+2 create 2 user with using variable file.
+
+###########3#############33
+Install nginx with when condition  for  centos and ubuntu
+find file and print mesg success or  fail using conditions( ignore errors)
