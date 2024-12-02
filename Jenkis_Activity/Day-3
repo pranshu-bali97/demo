@@ -1,0 +1,49 @@
+######1###########
+Create a pipeline that accepts a parameter and prints its value in the output
+
+#####2########
+1. Add a parameter in Jenkins Pipeline that will take a name and print Hello <name>
+2. Add a stage to clone spring3hibernate repository.
+3. Add a stage to count the number of words in README.md
+4. Add an option to take user input while running the pipeline if we want to fail the pipeline
+5. Print success/failure message based on build success.
+6. Update pipeline to execute every 5 minutes
+7. Ensure that if pipeline is running for more than a minute it should fail.
+
+#####3#######
+In this lab we will create a Jenkins Declarative Pipeline for CI  :
+https://github.com/builderHub/CICD-01.git
+
+Create a Jenkins Pipeline that will kick start the CI process if a commit is made.
+Add a Stage in pipeline to perform to Code stability.
+Add a Stage in pipeline to perform code quality analysis.
+Add a Stage in pipeline to perform code coverage analysis.
+Add a Stage in pipeline to generate report for code quality & analysis.
+Add a Stage in pipeline to send Slack/Email notification.
+
+######topic######
+1	Gitleaks
+2	Scripted Pipeline
+3	Parameters and Env. Variables
+4	Pipeline Syntax
+5	Script Approval
+6	Jenkins Backup
+7	Jenkins Job DSL
+8	Custom Jenkins Plugins
+9	License Scanning
+10	Advanced Scripting with Groovy
+11	Remote Execution in Jenkins
+12	Version Control Integration
+12	Jenkins Troubleshooting
+14	Parameterized Builds
+15	LDAP
+16	GitHub SSO
+17	Jenkins Best Practices
+18	Jenkins Troubleshooting
+19	Extend Shared Library
+20	Deployment Strategies
+21	Common Problems & Soln In Jenkins
+22	Jenkins Configuration File
+23	Reporting Plugins
+24	Dynamic Agent Configuration
+
