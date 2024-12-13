@@ -62,12 +62,12 @@ Use S3 to store logs or metrics from the canary deployment.
 
 Documentation: 
 
- Document each step of your implementation process,        including any challenges faced and how you resolved them. 
+ Document each step of your implementation process,including any challenges faced and how you resolved them. 
 
 Include screenshots or code snippets where applicable. 
 
 GitHub Repository: 
 
-Create a GitHub repository to store your research, implementation code, and documentation. 
+Create a GitHub repository to store your research,implementation code, and documentation. 
 
 Ensure your repository is well-organized with clear README files explaining each deployment strategy and how you implemented them. 
