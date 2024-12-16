@@ -1,0 +1,18 @@
+"Task1:
+Part-1:
+Create a custom bridge network and create 2 busybox containers (c1 and c2 ) within that network, now try to access/ping the containers from inside the container. Also try to hit google.com from the container
+
+Part-2:
+Now create another custom bridge network and create a container (c3) inside this network, try to access c1 from c3. Also access google.com from c3
+
+Part-3:
+Create host network and run nginx container without port mapping within this network , try to hit nginx url from browser, also access google.com from this container
+
+Part-4:
+Create nginx container in none network and try to access this container from browser.also try to access google.com from this container."
+
+#############Activity#############
+-Create a account in dockerhub using mail you're mail ID.
+-Once account is created in dokcerhub then create a registry in dockerhub.
+-Now create a docker image using dockerfile and tag the image a/c to you're registry name and push to you're dockerhub registry.
+-Once image is pushed to dokcerhub registry.Share the screenshot of image created locally and image in dockerhub registry in group"
