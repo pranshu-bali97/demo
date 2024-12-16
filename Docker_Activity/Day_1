@@ -1,0 +1,119 @@
+sudo apt install docker.io -y
+
+docker ps
+sudo usermod -aG docker $username
+newgrp docker
+sudo reboot
+
+################Activity#########
+Running your first container : 
+1. Pull Docker Nginx Image. 
+2. List out the images in your system. 
+3. Run all the docker commands without sudo 
+4. Run out a container using Nginx Image and name your conatiner as per you team name in interactive mode.
+5. Run another container of Nginx and name your conatiner as per your name using detached mode."
+
+
+"Create a nginx create with your name and map hostname port 99 with container port of nginx. 
+Try to access the container over public network.
+Create a another container with your team and map with some random port in hostname machine and try to access the container over public network.
+Once both the containers are listed now list the containers."
+
+
+docker run -d --name load-testing --memory=10m --memory-reservation=20m nginx
+docker run -d --name load-testing --memory=10m  nginx
+docker stats
+yes > /dev/null &
+docker run -d --name c7 --memory=20m --cpus=0.5 --memory-reservation=10m nginx
+
+docker run -d --name c2 --memory-reservation=6m --memory=12m --cpus=0.5 nginx
+
+Explanation of Parameters:
+
+ --memory-reservation=6m: Sets a soft limit on memory usage.
+ --memory=12m: Sets a hard limit on memory usage.
+ --cpus=0.5: Limits the container to using up to 50% of one CPU core.
+
+
+docker run -d --env-file=env.list --name c8 nginx
+docker run -d -e env=production -e new=add --name c6 nginx
+
+ 2117  docker ps
+ 2118  docker exec -it c2 bash
+ 2119  docker export c2 > new.tar
+ 2121  docker image import < new.tar custom-image
+ 2122  docker image import  new.tar custom-image
+ 2123  docker images
+ 2124  docker run -it --name c3 custom-image bash
+ 2125  docker ps
+ 2126  docker commit c2 new-image
+ 2127  docker images
+ 2128  docker commit c2 nginx:v2
+ 2129  docker images
+ 2130  docker image save new-image > image.tar
+ 2132  docker rmi -f new-image
+ 2133  docker images
+ 2134  docker image load < image.tar
+ 2135  docker images
+ 2136  docker ps
+ 2137  docker exec -it c2 bash
+ 2138  docker ps
+ 2139  docker rm -f $(docker ps -aq)
+ 2141  rm -rf image.tar new.tar 
+ 2143  rm -rf ARG/
+ 2145  docker ps
+ 2146  docker ps -a
+ 2147  docker images
+ 2148  docker image inspect nginx
+ 2149  docker run -d --name c1 nginx
+ 2150  docker commit --author "sudheer pathak" -m "my first image" c1 sudheer:latest
+ 2151  docker image inspect sudheer
+ 2152  docker images
+ 2153  docker ps
+ 2154  df -h
+ 2155  docker run -d --name load-testing --memory=10m  nginx
+ 2156  docker ps
+ 2157  docker stats
+ 2158  docker ps
+ 2159  docker rm -f c1
+ 2160  docker run -d --name c1 --memory-reservation=6m --memory=10m nginx
+ 2161  docker stats
+ 2162  docker exec -it c1 bash
+ 2163  docker ps
+ 2164  docker ps -a
+ 2165  docker logs -f be72029907b7
+ 2166  docker start c1
+ 2167  docker ps
+ 2168  docker stats
+ 2169  docker run -d --name c7 --memory=20m --cpus=0.5 --memory-reservation=10m nginx
+ 2170  docker stats
+ 2171  docker ps
+ 2172  docker rm -f c1
+ 2173  docker run -d -e env=production --name c5 nginx
+ 2174  docker exec -it c5 printenv
+ 2175  docker run -d -e env=production -e new=add --name c6 nginx
+ 2176  docker exec -it c6 printenv
+ 2177  vi env.list
+ 2178  docker run -d --env-file=env.list --name c8 nginx
+ 2179  docker exec -it c8 printenv
+
+##############Activity###################
+Create a container with your name and assign 2 CPUs to it and 500mb of RAM and then put a load on container and try to check if container exit after 100% utilisation or not. Also share the screenshot of resource utilisation when it is fully utilised as per defined limit of cpu and RAM.
+
+##########Activity##############################
+Create a container and pass 1 env variable with key as team and value as your team name. and print the env inside the container using printenv command. Create a container and pass the environmental variables using a file. and list all the envs inside the container using printenv command.
+
+#############Activity#####################
+"Task1:
+Create docker volume named ""dbvol""
+Run docker container from wordpress image and mount ""dbvol"" to /var/lib/mysql
+Display all docker volumes.
+Create another docker volume named ""testvol""
+Remove docker volume ""testvol""
+
+Task2:
+Create docker volume named opstree-vol
+Create a nginx container.
+Mount the volume ""opstree-vol"" to nginx container with ReadOnly Permission.
+Go and try to edit any file at mounted path in container to ensure the permissions are correct or not."
+
