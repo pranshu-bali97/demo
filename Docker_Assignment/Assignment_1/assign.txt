@@ -7,8 +7,8 @@ Create a utility to host a static website via Docker with below features:
         - 10-12
         - 4-6
     - Modify the utility so that in which first half it would be printing your name and in second half your buddy name. i.e below will be the output of curl command
-        - 10-12 | Hello from Mohan
-        - 4-6 | Hell from Pankaj        
+        - 10-12 | Hello from pranshu
+        - 4-6 | Hell from Buddy name       
 Part2
 Create a new container.
 Create One directory Structure:
