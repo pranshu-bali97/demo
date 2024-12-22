@@ -1,0 +1,134 @@
+1849  kubectl get nodes
+ 1850  kubectl apply -f pod.yaml --dry-run=client
+ 1851  kubectl apply -f pod.yaml --dry-run=server
+ 1852  kubectl get pods
+ 1853  kubectl apply -f pod.yaml
+ 1854  kubectl get pods
+ 1855  kubectl get pods -w
+ 1856  kubectl get pod
+ 1857  kubectl describe pods myapp
+ 1858  kubectl get events
+ 1859  kubectl delete pods myapp
+ 1860  kubectl get po
+ 1861  kubectl get pod
+ 1862  kubectl get pods
+ 1863  kubectl api-resources | grep pods
+ 1864  kubectl api-resources 
+ 1865  kubectl get po
+ 1866  kubectl create -f pod.yaml 
+ 1867  kubectl get po
+ 1868  kubectl create -f pod.yaml 
+ 1869  kubectl apply -f pod.yaml 
+ 1870  kubectl get po --show-labels
+ 1871  kubectl delete -f pod.yaml 
+ 1872  kubectl get po
+ 1873  kubectl apply -f pod.yaml 
+ 1874  kubectl edit po myapp
+ 1875  kubectl get po --show-labels
+ 1876  kubectl exec -it myapp -- bash
+ 1877  kubectl exec  myapp -- ls /tmp/
+ 1878  kubectl exec nginx-pod -- ls /usr/share/nginx/html
+ 1879  kubectl exec myapp -- ls /usr/share/nginx/html
+ 1880  kubectl run myapp2 --image=nginx 
+ 1881  kubectl get po
+ 1882  kubectl label po myapp2 --labels key=value
+ 1883  kubectl label po myapp2 --label key=value
+ 1884  kubectl labels po myapp2 --label key=value
+ 1885  kubectl label po myapp2 --labels key=value
+ 1886  kubectl label --help
+ 1887  kubectl label po myapp2  key=value
+ 1888  kubectl get po --show-labels
+ 1890  docker stats
+ 1891  kubectl get po
+ 1892  kubectl run myapp3 --image=nginx -o yaml --dry-run=client
+ 1893  kubectl get po -o wide --show-labels
+ 1898  aws configure
+ 1899  cd Downloads/
+ 1900  ssh -i "testing.pem" ubuntu@ec2-3-110-121-3.ap-south-1.compute.amazonaws.com
+ 1901  chmod 400 testing.pem 
+ 1902  ssh -i "testing.pem" ubuntu@ec2-3-110-121-3.ap-south-1.compute.amazonaws.com
+ 1903  cd
+ 1904  cd python-training/
+ 1905  code .
+ 1906  cd
+ 1907  cd Downloads/
+ 1908  ssh -i "testing.pem" ubuntu@ec2-13-232-73-192.ap-south-1.compute.amazonaws.com
+ 1909  cd
+ 1910  cd kubernetes-classes/
+ 1911  ls
+ 1912  cd service/
+ 1913  ls
+ 1914  minikube start
+ 1915  minikube status
+ 1916  cd kubernetes-classes/
+ 1917  ls
+ 1918  cd Replica-controller-Replicaset/
+ 1919  code .
+ 1920  kubectl apply -f Replicacontroller.yaml --dry-run=server
+ 1921  kubectl apply -f Replicacontroller.yaml 
+ 1922  kubectl get rs
+ 1923  kubectl get rc
+ 1924  kubectl get po
+ 1925  kubectl get po --show-labels
+ 1926  kubectl delete po myapp
+ 1927  kubectl get po --show-labels
+ 1928  kubectl delete po myapp-d9bhd
+ 1929  kubectl get po --show-labels
+ 1930  kubectl delete po myapp-d9fvk myapp-wwwlc
+ 1931  kubectl delete po 
+ 1932  kubectl get po --show-labels
+ 1933  kubectl get rc
+ 1934  kubectl delete rc myapp
+ 1935  kubectl get po
+ 1936  kubectl apply -f Replicacontroller.yaml 
+ 1937  kubectl delete rc myapp --casade=false
+ 1938  kubectl delete rc --cascade=false myapp
+ 1939  kubectl get rc
+ 1940  kubectl get po
+ 1941  kubectl delete po myapp-bbhdz
+ 1942  kubectl apply -f Replicacontroller.yaml 
+ 1943  kubectl get po
+ 1944  kubectl get po --show-labels
+ 1945  kubectl lebel po myapp-844hb app-
+ 1946  kubectl label po myapp-844hb app-
+ 1947  kubectl get po --show-labels
+ 1948  kubectl delete rc myapp
+ 1949  kubectl get po --show-labels
+ 1950  kubectl apply -f Replicacontroller.yaml 
+ 1951  kubectl describe rc myapp
+ 1952  kubectl get ns
+ 1953  kubectl delete rc myapp
+ 1954  kubectl get po
+ 1955  kubectl delete po --all
+ 1956  cd ..
+ 1957  cd pod
+ 1958  ls
+ 1959  cd pods/
+ 1960  code .
+ 1961  kubectl explain 
+ 1962  kubectl apply -f pod.yaml 
+ 1963  kubectl get po
+ 1964  kubectl delete po --all
+ 1965  kubectl apply -f two-container.yaml 
+ 1966  kubectl get po --show-labels -o wide
+ 1967  kubectl logs -f my-two-container-pod
+ 1968  kubectl logs -c container-1 -f my-two-container-pod
+ 1969  kubectl exec -it  -c container-1  my-two-container-pod -- bash
+ 1970  kubectl describe po my-two-container-pod
+ 1971  kubectl get events
+ 1972  kubectl get po
+ 1973  kubectl delete po my-two-container-pod
+ 1974  kubectl explain po --recursive | less
+ 1975  kubectl apply -f initcontainer.yaml ;  watch "kubectl get po -o wide --show-labels"
+ 1976  kubectl delete -f initcontainer.yaml ;  watch "kubectl get po -o wide --show-labels"
+ 
+ 1983  kubectl run new --image=nginx --label type=myapp
+ 1984  kubectl run new --image=nginx --labels type=myapp
+ 1985  kubectl run new1 --image=nginx --labels type=myapp1
+ 1986  kubectl run new2 --image=nginx --labels app=backend
+ 1987  kubectl get po --show-labels
+ 1988  kubectl apply -f replicaset.yaml ; watch "kubectl get po -o wide --show-labels"
+ 1989  kubectl get rs
+ 1990  kubectl delete rs first-replicaset ; watch "kubectl get po"
+ 1991  kubectl get po --show-labels
+ 1992  kubectl delete po --all
