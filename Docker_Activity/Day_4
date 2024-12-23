@@ -1,4 +1,162 @@
-1849  kubectl get nodes
+##############dockercompose###################33
+docker-compose -v
+ 1997  cd docker-compose/
+ 1998  code .
+ 1999  #docker-compose.yaml
+ 2000  docker-compose -h
+ 2001  docker-compose config
+ 2002  docker-compose -h
+ 2003  docker-compose create
+ 2004  docker-compose ps
+ 2005  docker-compose images
+ 2006  docker-compose start
+ 2007  docker-compose create --no-start
+ 2008  docker-compose create up --no-start
+ 2009  docker-compose  up --no-start
+ 2010  docker network ls
+ 2011  docker-compose ps
+ 2012  docker-compose up 
+ 2013  docker-compose stop
+ 2014  docker-compose start
+ 2015  docker-compose pause
+ 2016  docker-compose unpause
+ 2017  docker-compose logs
+ 2018  docker-compose frontend logs
+ 2019  docker-compose logs -f frontend
+ 2020  docker-compose logs -f database
+ 2021  docker-compose -h
+ 2022  docker-compose down
+ 2023  docker-compose up -d
+ 2024  docker-compose ps
+ 2025  docker-compose --scale frontend=2 --scale backend=2 --scale database=3
+ 2026  docker-compose scale frontend=2 scale backend=2 scale database=3
+ 2027  docker-compose scale -h
+ 2028  docker-compose --scale frontend=2
+ 2029  docker-compose scale --help
+ 2030  docker-compose ps
+ 2031  docker-compose scale backend=2
+ 2032  docker-compose scale backend=2 scale frontend=2
+ 2033  docker-compose ps
+ 2034  docker-compose --scale backend=3 --scale frontend=3
+ 2035  docker-compose scale backend=2 scale frontend=3
+ 2036  docker-compose ps
+ 2037  docker-compose --scale backend=2  frontend=3
+ 2038  docker-compose --scale --help
+ 2039  docker-compose up --scale backend=2  --scale frontend=3 --scale database=3
+ 2040  docker-compose down
+ 2041  docker-compose down --volume
+ 2042  docker-compose ps
+ 2043  docker ps
+ 2044  docker ps -a
+ 2045  docker rmi -f 7744a16b2c51 8be626160cf0 8f299a197f5a
+ 2046  docker rm -f 7744a16b2c51 8be626160cf0 8f299a197f5a
+ 2047  docker ps
+ 2048  docker ps -a
+ 2049  docker-compose down
+ 2050  docker-compose down --network
+ 2051  docker network ls
+ 2052  docker network rm docker-compose_default
+ 2053  docker network rm -f docker-compose_default
+ 2054  docker network prune -a
+ 2055  docker network prune 
+ 2056  docker network ls
+ 2057  docker nework rm -f docker-compose_default
+ 2058  docker network rm -f docker-compose_default
+ 2059  docker-compose ps
+ 2060  docker-compose ps -a
+ 2061  docker network ls
+ 2062  docker-compose down
+ 2063  docker ps -a
+ 2064  docker rm -f 047
+ 2065  docker-compose down
+ 2066  docker ps -a
+ 2067  docker network rm docker-compose_default
+ 2068  docker network inspect docker-compose_default
+ 2069  docker-compose down
+ 2070  docker network rm docker-compose_default
+ 2071  sudo systemctl restart docker
+ 2072  docker-compose down
+ 2073  docker-compose ps
+ 2074  docker-compose down
+ 2075  docker network ls
+ 2076  docker-compose up -d
+ 2077  docker-compose ps
+ 2078  docker-compose up -d --scale frontend=2
+ 2079  docker-compose up -d --scale frontend=2 --scale backend=3 --scale database=3
+ 2080  docker-compose ps
+ 2081  docker-compose up -d --scale frontend=1 --scale backend=1 --scale database=1
+ 2082  docker-compose down
+ 2083  docker-compose up -d
+ 2084  docker-compose exec frontend printenv
+ 2085  docker-compose up -d
+ 2086  docker-compose exec env backend
+ 2087  docker-compose ps
+ 2088  docker-compose exec env backend
+ 2089  docker-compose exec printenv backend
+ 2090  docker-compose exec -it backend -- bash
+ 2091  docker ps
+ 2092  docker exec -it backend -- bash
+ 2093  docker exec  backend -- bash
+ 2094  docker exec -it  backend  bash
+ 2095  docker exec -it  a77  bash
+ 2096  docker exec -it  backend  bash
+ 2097  docker exec -it  backend  sh
+ 2098  docker-compose exec  backend env
+ 2099  #docker run -d -v mysql:/var/run/lib --name c1 mysql
+ 2100  docker volume ls
+ 2101  docker volume rm 35a5c2bdb58a67d71d0440504d82cde30bf15ba9dafb6a12b48521fede41f0b4
+ 2102  #docker run -d -v :/var/run/lib --name c1 mysql
+ 2103  docker-compose down
+ 2104  docker-compose down --volume
+ 2105  docker-compose -f docker-full-compose.yml build 
+ 2106  docker-compose ps
+ 2107  docker-compose ps -a
+ 2108  docker-compose images
+ 2109  docker-compose image
+ 2110  docker-compose images
+ 2111  docker images
+ 2112  docker-compose -h
+ 2113  docker-compose up -d
+ 2114  docker-compose down
+ 2115  docker images
+ 2116  docker-compose -f docker-full-compose.yml up -d
+ 2117  docker-compose ps
+ 2118  docker network ls
+ 2119  docker volume ls
+ 2120  docker-compose ps
+ 2121  docker-compose exec backend env
+ 2122  docker exec -it frontend bash
+ 2123  docker psh
+ 2124  docker exec -it frontend bash
+ 2125  docker ps
+ 2126  docker exec -it frontend bash
+ 2127  docker exec -it frontend_1 bash
+ 2128  docker exec -it 3656ee97fe2e bash
+ 2129  docker images
+ 2130  docker-compose down
+ 2131  docker ps
+ 2132  docker ps -a
+ 2133  dcoker volume ls
+ 2134  docker volume ls
+ 2135  docker-compose down --volume
+ 2136  docker volume ls
+ 2137  docker-compose -f docker-full-compose.yml down --volume
+ 2138  docker volume ls
+ 2139  ls
+ 2140  #sudo apt install docker-compse -y 
+ 2141  history
+ 2142  docker-compose -h
+ 2143  docker-compose up -d
+ 2144  docker-compose top
+ 2145  top
+ 2146  docker-compose top
+ 2147  docker-compose top -f frontend
+ 2148  docker-compose top  frontend
+ 2149  docker-compose -h
+ 2150  docker-compose -v
+
+############k8's##################
+ 1849  kubectl get nodes
  1850  kubectl apply -f pod.yaml --dry-run=client
  1851  kubectl apply -f pod.yaml --dry-run=server
  1852  kubectl get pods
