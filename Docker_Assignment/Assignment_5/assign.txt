@@ -22,5 +22,5 @@ Step3:
     - Run Webserver pod
         * Validation
 Part2
-In this assignment we will try to understand what Deployments and RelicaSets are in K8s.
+In this assignment we will try to understand what Deployments and ReplicaSets are in K8s.
 This time try to deploy OT-Microservice Application using Deployments and ReplicaSets.
